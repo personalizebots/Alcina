@@ -36,63 +36,77 @@
             border-radius: 5px;
             font-size: 14px;
         }
-        .parcela {
-            color: #1f4ed8; /* azul */
+        .parcela { color: #1f4ed8; }
+        .amortizacao { color: #15803d; }
+        .juros { color: #b91c1c; }
+        .fim { line-height: 1.3; }
+        .hint {
+            font-size: 13px;
+            color: #555;
         }
-        
-        .amortizacao {
-            color: #15803d; /* verde */
-        }
-        
-        .juros {
-            color: #b91c1c; /* vermelho */
-        }
-        
-        .valor {
-            font-weight: bold;
-        }
-        .fim {
-            line-height: 1.3; /* diminui o espaço entre linhas */
-        }
-
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h2>Financiamento Alcina</h2>
+    <h2>💰 Financiamento Alcina</h2>
 
     <div class="linha">
-        Total pago de juros até dez/25: <span class="valor">R$ 9.449,81</span>
+        💸 Total já recebido em <strong>juros </strong> até dez/25:
+        <span class="valor">R$ 9.449,81</span>
     </div>
 
     <div class="linha">
-        Total pago casa até dez/25: <span class="valor">R$ 41.336,91</span>
+        🌱 Total já <strong>quitado do imóvel</strong> até dez/25:
+        <span class="valor">R$ 41.336,91</span>
     </div>
 
     <div class="linha">
-        Pendente casa: <span class="valor">R$ R$ 558.663,09</span>
+        🏦 Total casa ainda <strong>pendente</strong>:
+        <span class="valor">R$ 558.663,09</span>
     </div>
     
     <div class="linha">
-        Pendente Juros: <span class="valor">R$ R$ 465.520,42</span>
+        🔥 Juros ainda a <strong>receber</strong>:
+        <span class="valor">R$ 465.520,42</span>
+    </div>
+    
+    <div class="linha">
+        🧾 Total a <strong>receber no fim (dez/39)</strong>:
+        <span class="valor">R$ 1,074,970.23</span>
     </div>
 
     <div class="fim">
-        <span class="parcela">Parcela Atual: <span class="valor">R$ 6.023,00</span></span><br>
-        <span class="amortizacao">Amortização: <span class="valor">R$ 1.553,70</span></span><br>
-        <span class="juros">Juros: <span class="valor">R$ 4.469,30</span></span>
+        <span class="parcela">
+            🧾 Dinheiro que entra 30/01/2026:
+            <span class="valor">R$ 6.023,00</span>
+        </span><br>
+
+        <span class="amortizacao">
+            🌱 Parte para investir:
+            <span class="valor">R$ 1.553,70</span>
+        </span><br>
+
+        <span class="juros">
+            💸 Parte livre (juros / farra):
+            <span class="valor">R$ 4.469,30</span>
+        </span>
     </div>
 
-    <button onclick="toggleObservacoes()">Observações</button>
+    <button onclick="toggleObservacoes()">📌 Ver detalhes</button>
 
     <div class="observacoes" id="observacoes">
-        • Parcela 1: R$5.356,00 Pg - Desc cartão (Amortização set/25)<br>
-        • Parcela 2: R$3.384,72 Pg - Desc cartão (Amortização Out/25)<br>
-        • Parcela 3: Mãe deu pra gente R$ 4,351.51 (Nov/25)<br>
-        • Parcela 4: Mãe deu pra gente R$ 5,015.61 (Dez/25)<br>
-        • Amortização R$30.000,00 (Dez/25)<br>
+        • 🧾 Parcela 1: R$ 5.356,00 – recebida via cartão (Set/25)<br>
+        • 🧾 Parcela 2: R$ 3.384,72 – recebida via cartão (Out/25)<br>
+        • ❤️ Ajuda da mãe: R$ 4.351,51 (Nov/25)<br>
+        • ❤️ Ajuda da mãe: R$ 5.015,61 (Dez/25)<br>
+        • 🌱 Amortização extra: R$ 30.000,00 (Dez/25)<br>
     </div>
+
+    <p class="hint">
+        👉 <strong>Resumo:</strong> 🌱 amortização é dinheiro que vira investimento,
+        enquanto 💸 juros é dinheiro livre que entra todo mês.
+    </p>
 </div>
 
 <script>
